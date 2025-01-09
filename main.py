@@ -5,13 +5,15 @@ def main():
   else :
     print("\nEncryption/cipher modes available:")
     print("  1. Caeser Cipher")
-    # print("  2. Atbash Cipher")
+    print("  2. Atbash Cipher")
     # print("  3. Vigen Cipher")
     try:
       choice = int(input("\nKindly enter your numerical choice here: "))
       if (choice == 1):
         shift = None
         caeser(text, shift)
+      elif (choice == 2):
+        atbash(text)
       else: 
         print("Invalid input. Please enter a valid number.")
     except ValueError:
@@ -19,22 +21,44 @@ def main():
   
 
 
+def atbash(text):
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+  alphabet_upper = alphabet.upper()
+  reversed_alphabet = "zyxwvutsrqponmlkjihgfedcba"
+  reversed_alphabet_upper = "zyxwvutsrqponmlkjihgfedcba"
+  ciphered_text = ""
+
+  for char in text: 
+    if char.islower(): 
+      index = alphabet.index(char)
+      ciphered_char = reversed_alphabet[index]
+      ciphered_text += ciphered_char
+
+    elif char.isupper():
+      index = alphabet_upper.index(char)
+      ciphered_char = reversed_alphabet_upper[index]
+      ciphered_text += ciphered_char
+    else: 
+      ciphered_text += char
+  print("Ciphered text: " + ciphered_text)
+
+
 
 def caeser(text, shift):
   if shift == None:
-    tempShift = int(input("Kindly enter parameter shift: "))
-    shift = tempShift
+    temp_shift = int(input("Kindly enter parameter shift: "))
+    shift = temp_shift
 
   text.lower()
-  encrypted_text = ""
+  ciphered_text = ""
 
   for char in text:
     if char.islower():
-      encrypted_text += chr((ord(char) + shift - 97) % 26 + 97)
+      ciphered_text += chr((ord(char) + shift - 97) % 26 + 97)
     else:
-      encrypted_text += char
+      ciphered_text += char
 
-  print(f"Ciphered/Encrypted text: {encrypted_text}")  
+  print(f"Ciphered text: {ciphered_text}")  
 
   
 
