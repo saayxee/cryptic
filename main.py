@@ -23,24 +23,21 @@ def main():
       print("Invalid input. Please enter a valid number.")
   
 def xor(text):
-    if (len(text) > 255):
-      print("Constraint - Text Too Long")
-    else: 
-      # Generate the key
-      key = math.floor(((len(text) ** 2) * 9) / 5) % 256
+    # Generate the key
+    key = math.floor(((len(text) ** 2) * 9) / 5) % 256
 
-      # Convert the text to bytes
-      input_bytes = bytearray(text, 'utf-8')
+    # Convert the text to bytes
+    input_bytes = bytearray(text, 'utf-8')
 
-      # Perform XOR encryption
-      output_bytes = bytearray([b ^ key for b in input_bytes])
+    # Perform XOR encryption
+    output_bytes = bytearray([b ^ key for b in input_bytes])
 
-      # Convert each byte to a hexadecimal pair and join them
-      hex_output = ' '.join(f'{byte:02x}' for byte in output_bytes)
+    # Convert each byte to a hexadecimal pair and join them
+    hex_output = ' '.join(f'{byte:02x}' for byte in output_bytes)
 
-      # Print results
-      print("Ciphered Text (Hexadecimal): " + hex_output)
-      print("Key: " + str(key))
+    # Print results
+    print("Ciphered Text (Hexadecimal): " + hex_output)
+    print("Key: " + str(key))
 
 
 
