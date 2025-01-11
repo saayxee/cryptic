@@ -1,31 +1,30 @@
 # Cryptic
-This is a ciphering tool implemented in Python without using any external libraries.
+
+Cryptic is a lightweight ciphering tool implemented in Python, designed to explore and demonstrate basic ciphering techniques without relying on external libraries.
+
+## Purpose
+This project aims to implement simple ciphering techniques and deepen understanding of their mechanics.
 
 ## Features
-- Use any of the following three algorithms to cipher text:
 
-  - Caeser Cipher
-  - Atbash Cipher
-  - XOR Cipher.
+Cryptic supports the following ciphering algorithms:
 
-- Define Keys/Shift Values (For 2 algorithms, XOR cipher is dynamically generated using a formula based on the length of the plaintext string).
+1.  Caesar Cipher: Define your desired shift value  
+2.  Atbash Cipher: Keys are dynamically generated using a formula based on the plaintext's length.  
+3.  XOR Cipher: A fixed, straightforward substitution cipher
 
 ## Limitations
-None of these ciphers are considered "secure" as they can be exploited by various techniques such as frequency analysis. My only goal for this project was to implement some simple ciphering techniques, and understand the nature of them. 
+
+These ciphers are not secure by modern cryptographic standards. Techniques such as frequency analysis can easily break them.  
 
 ## Getting Started
-Clone the directory.
-```
-git clone https://github.com/saayxee/cryptic
-```
-Then change the directory.
-```
-cd cryptic
-```
 
-Now you may run the `main` script:
+### Prerequisites
+- Python 3.x installed on your system.
 
-```
-python main.py
-```
-NOTE: Make sure you have Python 3 installed
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/saayxee/cryptic
