@@ -36,7 +36,7 @@ cd cryptic
 ## Usage
 **Run the file**
 ```bash
-python keylogger.py
+python cryptic.py
 ```
 **Enter your text**: Input the text you want to cipher.
 
