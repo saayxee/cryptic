@@ -23,13 +23,13 @@ Cryptic supports the following ciphering algorithms:
 **Clone the repository**
 
 ```bash
-git clone https://github.com/saayxee/norick
+git clone https://github.com/saayxee/cryptic
 ```
 
 **Change directory**
 
 ```bash
-cd norick
+cd cryptic
 ```
 
 
