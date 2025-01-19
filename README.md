@@ -38,13 +38,9 @@ cd cryptic
 ```bash
 python keylogger.py
 ```
-**Enter your text**
+**Enter your text**: Input the text you want to cipher.
 
-Input the text you want to cipher.
-
-**Choose a mode**
-
-Choose the ciphering algorithm to wish to implement.
+**Choose a mode**: Choose the ciphering algorithm you wish to implement.
 
 ## Contribution/Bugs
 > If you experience any bugs regarding the tool, open an issue and document the problem in detail so that I can replicate it and fix it accordingly.
